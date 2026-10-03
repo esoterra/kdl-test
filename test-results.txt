@@ -1,0 +1,30 @@
+running 4 tests
+  × invalid type: string "asdf", expected struct Bar
+   ╭────
+ 1 │ foo bar="asdf"
+   ·     ─────┬────
+   ·          ╰── while deserializing this KDL value
+   ╰────
+
+test kdl::tests::accepts_child_node ... ok
+  × error parsing KDL
+test kdl::tests::rejects_property ... ok
+
+Error: 
+  × unexpected property `bar`
+   ╭─[test:1:5]
+ 1 │ foo bar="asdf"
+   ·     ─┬─
+   ·      ╰── unexpected property
+   ╰────
+
+test knus::tests::rejects_property ... ok
+test knus::tests::accepts_child_node ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests kdl_test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
